@@ -37,6 +37,11 @@ Important commandline arguments
 - `gnn_num_layers`: number of DEA-GCN layers
 - `use_stored_x`: use precomputed distance encoding(DE) and node statistics to save time
 
+for other arguments, please check
+```
+python dea_gcn_jk.py --help
+```
+
 for example,
 ```
 python dea-gcn-jk.py --use_stored_x --gnn_num_layers 2 --k 3 --jk_mode mean
