@@ -1,4 +1,5 @@
-# CS224W Course Project   
+# CS224W Course Project  
+This is a course project for [Stanford CS224W](http://web.stanford.edu/class/cs224w/) (Machine Learning with Graphs) winter 2021, which achieved SOTA on OGB leaderboard.  
 ## Authors: 
 Yichen Yang, Lingjue Xie, Fangchen Li  
 
@@ -56,6 +57,6 @@ python dea_gcn_jk.py --use_stored_x --gnn_num_layers 2 --k 3 --jk_mode mean
 | DEA-JK-Max  (3 layers) | 0.6713 ± 0.0071 | 0.7672 ± 0.0265 | 1763329    | Tesla T4   |
 
 \* DEA-JK-Mean and DEA-JK_LSTM use 5 runs, DEA-JK-Max (3 layers) use 10 runs.  
-Please see the report for discussions of other models and hyperparameters.   
+Please see the [report] (https://github.com/JeffJeffy/CS224W-OGB-DEA-JK/blob/main/CS224w_final_report.pdf) for discussions of other models and hyperparameters.   
 
  
