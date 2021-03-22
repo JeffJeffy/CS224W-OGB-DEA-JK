@@ -54,7 +54,7 @@ python dea_gcn_jk.py --use_stored_x --gnn_num_layers 2 --k 3 --jk_mode mean
 | ------------|-----------------| ----------------|------------|------------|
 | DEA-JK-Mean (3 layers) | 0.6885 ± 0.0048 | 0.7133 ± 0.1519 | 1763329    | Tesla P100 |
 | DEA-JK-LSTM (3 layers) | 0.6900 ± 0.0039 | 0.7662 ± 0.0681 | 3736322    | Tesla K80  |
-| DEA-JK-Max  (3 layers) | 0.6713 ± 0.0071 | 0.7672 ± 0.0265 | 1763329    | Tesla T4   |
+| **DEA-JK-Max  (3 layers)** | 0.6713 ± 0.0071 | **0.7672 ± 0.0265** | 1763329    | Tesla T4   |
 
 \* DEA-JK-Mean and DEA-JK_LSTM use 5 runs, DEA-JK-Max (3 layers) use 10 runs.  
 Please see the [report](https://github.com/JeffJeffy/CS224W-OGB-DEA-JK/blob/main/CS224w_final_report.pdf) for discussions of other models and hyperparameters.   
