@@ -27,7 +27,7 @@ pip install ogb
 
 To replicate result on the leaderboard, use
 ```
-python dea-gcn-jk.py --use_stored_x
+python dea_gcn_jk.py --use_stored_x
 ```
 this gives result of DEA-JK-Max (3 layers)  
 
@@ -44,7 +44,7 @@ python dea_gcn_jk.py --help
 
 for example,
 ```
-python dea-gcn-jk.py --use_stored_x --gnn_num_layers 2 --k 3 --jk_mode mean
+python dea_gcn_jk.py --use_stored_x --gnn_num_layers 2 --k 3 --jk_mode mean
 ```
 
 ## Result:   
