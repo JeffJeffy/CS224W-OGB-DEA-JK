@@ -28,9 +28,14 @@ pip install ogb
 
 To replicate result on the leaderboard, use
 ```
-python dea_gcn_jk.py --use_stored_x
+python dea_gcn_jk.py --use_stored_x --embed_dim 256 --mlp_hidden_dim 256 --gnn_hidden_dim 256
 ```
-this gives result of DEA-JK-Max (3 layers)  
+this gives result of DEA-JK-Max (3 layers， 256 hidden dimension)  
+
+A better result can be obtained by 
+```
+python dea_gcn_jk.py --use_stored_x --embed_dim 512 --mlp_hidden_dim 512 --gnn_hidden_dim 512
+```
 
 Important commandline arguments
 - `jk_mode`: how JKNet aggregates multiple layers [max, mean, lstm, sum, cat]
@@ -50,11 +55,17 @@ python dea_gcn_jk.py --use_stored_x --gnn_num_layers 2 --k 3 --jk_mode mean
 
 ## Result:   
 
+hidden dimension 256:  
 | Model       | Val Hits@20     | Test Hits@20    | Parameters | Hardware   |
 | ------------|-----------------| ----------------|------------|------------|
 | DEA-JK-Mean (3 layers) | 0.6885 ± 0.0048 | 0.7133 ± 0.1519 | 1763329    | Tesla P100 |
 | DEA-JK-LSTM (3 layers) | 0.6900 ± 0.0039 | 0.7662 ± 0.0681 | 3736322    | Tesla K80  |
 | **DEA-JK-Max  (3 layers)** | 0.6713 ± 0.0071 | **0.7672 ± 0.0265** | 1763329    | Tesla T4   |
+
+hidden dimension 512:
+| Model       | Val Hits@20     | Test Hits@20    | Parameters | Hardware   |
+| ------------|-----------------| ----------------|------------|------------|
+| DEA-JK-Max  (3 layers) | 0.7529 ± 0.0259 | 0.8263 ± 0.0325** | 4837377    | Tesla T4   |
 
 \* DEA-JK-Mean and DEA-JK_LSTM use 5 runs, DEA-JK-Max (3 layers) use 10 runs.  
 Please see the [report](https://github.com/JeffJeffy/CS224W-OGB-DEA-JK/blob/main/CS224w_final_report.pdf) for discussions of other models and hyperparameters.   
